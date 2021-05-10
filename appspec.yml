@@ -1,0 +1,11 @@
+version: 0.0  #0.0固定
+os: linux     #デプロイ先サーバーのos
+files:        #アプリケーションの配置場所
+  - source: /
+    destination: /hoge/ec2-user/php
+    owner: nginx
+    pattern: "**"
+    mode: 775
+    type:
+      - file
+      - directory
